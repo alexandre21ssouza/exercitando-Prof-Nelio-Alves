@@ -1,5 +1,10 @@
 package application.entities;
 
+
+/*Conta
+ * comum
+ */
+
 /* Herança é uma associação entre classes
  * (e não entre objetos), sendo assim, ao
  * extender ou extends uma classe, elas se 
@@ -10,13 +15,15 @@ package application.entities;
 //Super classe ou classe base
 public class Account {
 	
-	
+	//Número da conta
 	private Integer number;
+	//Nome Cliente
 	private String holder;
 	
 	/*Para que o método (loan da classe BusinessAcount tenha acesso
 	ao balance) uso o protected, que pode ser acessado por outra classe
 	do mesmo pacote*/
+	//Saldo da conta
 	protected Double balance;
 	
 	
@@ -57,7 +64,7 @@ public class Account {
 	}
 
 
-	/*O set é removido pelo fato de não podermudar
+	/*O set é removido pelo fato de não poder mudar
 	 *  o saldo da conta livremente
 	 */
 //	public void setBalance(Double balance) {
