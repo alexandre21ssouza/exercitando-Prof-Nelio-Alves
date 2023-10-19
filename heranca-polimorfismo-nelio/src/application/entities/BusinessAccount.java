@@ -1,8 +1,13 @@
 package application.entities;
 
+/*Conta
+ * empresarial
+ */
+
 //Classe derivada ou subclasse
 public class BusinessAccount extends Account{
 
+	//Limite para empréstimos
 	private Double loanLimit;
 
 	public BusinessAccount() {
