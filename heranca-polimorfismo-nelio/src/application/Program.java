@@ -36,7 +36,12 @@ public class Program {
 		 * usando o (Casting) para a conversão como veremos nos exemplos.
 		 */
 
-		BusinessAccount cont0 = (BusinessAccount) new Account();
+		/*
+		 * BusinessAccount cont0 = (BusinessAccount) new Account(1212, "Luiz",
+		 
+				1000.0);
+		System.out.println(cont0);
+		*/
 
 		/*
 		 * Uma subclasse não pode fazer DOWNCASTING DE OUTRA subclasse, para evitar
@@ -53,7 +58,7 @@ public class Program {
 		 * executá-lo.
 		 */
 		// uso indevido:
-		BusinessAccount cont2 = (BusinessAccount) acc3;
+		//BusinessAccount cont2 = (BusinessAccount) acc3;
 
 		/*
 		 * Para garantir que isso não ocorra, usamos a palavra reservada (instanceof)
@@ -79,5 +84,30 @@ public class Program {
 
 			// No console mostrará: "Update"
 		}
+		
+		/*Exemplo do uso da anotação sobrescrita @override
+		 * em SavingsAccount. permite usar o mesmo método mas com personalização
+		 * da classe extendida (Subclasse).
+		 */
+		Account saq1 = new SavingsAccount(1210, "alex", 1000.0, 0.1);
+		saq1.whithdraw(100.0);
+		
+		System.out.println(saq1.getBalance());
+		//Console: 900.0, pois a taxa não é cobrada na classe SavingsAccount.		
+	
+		
+		/*Exemplo do uso da palavra "super" na chamada do método original
+		 * feito na Superclasse Account e sobreposto com @override em 
+		 * BusinessAccount, com a personalização necessária de uma taxa de 
+		 * desconto adicional de 2.0 além dos 5.0 do método original.
+		 */
+		Account saq2 = new BusinessAccount(1243, "Léo", 1000.0, 0.01);
+		saq2.whithdraw(100);
+		
+		System.out.println(saq2.getBalance());
+		/*Console: 893.0, pois é cobrado a taxa no método original whithdraw()
+		 * de 5.0 na Superclasse Account e depois a adicional de 2.0 cobrada na 
+		 * classe BusinessAccount.
+		*/
 	}
 }

@@ -43,5 +43,26 @@ public class BusinessAccount extends Account {
 		}
 
 	}
+	
+	
+	/*
+	 * Usamos a anotação"@Override" para sobrescrever o método "whithdraw
+	 * (double amount);"
+	 * localizado na super classe Account, pois ela gera um desconto de 5.0,
+	 * e aqui deve ser descontado os 5.0 e depois desconta mais 2.0, 
+	 * no total 7.0.
+	 * Neste exemplo vamos usa a palavra "super" para chamar o método da
+	 * Superclasse Account. 
+	 *  @Override só deve ser usado em subclasses 
+	 * que contenham o mesmo método da super classe.
+	 *
+	 * Saque com taxa 5.0 e depois desconta 2.0. 
+	 * Método original usado também na SuperClasse.
+	*/
+	@Override
+	public void whithdraw(double amount) {
+		super.whithdraw(amount);
+		balance -= 2.0;
+	}
 
 }

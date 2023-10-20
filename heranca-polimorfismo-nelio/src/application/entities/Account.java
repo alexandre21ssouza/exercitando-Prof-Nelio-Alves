@@ -16,6 +16,8 @@ public class Account {
 
 	// Número da conta
 	private Integer number;
+	
+	
 	// Nome Cliente
 	private String holder;
 
@@ -23,6 +25,7 @@ public class Account {
 	 * Para que o método (loan da classe BusinessAcount tenha acesso ao balance) uso
 	 * o protected, que pode ser acessado por outra classe do mesmo pacote
 	 */
+	
 	// Saldo da conta
 	protected Double balance;
 
@@ -62,10 +65,17 @@ public class Account {
 //	public void setBalance(Double balance) {
 //		this.balance = balance;
 //	}
-
-	// Saque *balance é saldo
+	
+	
+	/*Método usado nas Subclasses, BusinessAccount e SavingAccount, com
+	 * @Override para sobre escrever este método com a personalização
+	 * necessária.
+	 *
+	 * Saque com taxa de 5.0; 
+	 * *balance é saldo.
+	 */
 	public void whithdraw(double amount) {
-		balance -= amount;
+		balance -= amount - 5.0;
 	}
 
 	// Depósito
