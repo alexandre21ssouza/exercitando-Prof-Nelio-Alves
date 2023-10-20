@@ -1,6 +1,6 @@
 # Sistema de Gestão de Contas Bancárias em Java
 
-Um projeto Java de Sistema de Gestão de Contas Bancárias que demonstra a aplicação de conceitos de Programação Orientada a Objetos (POO), Herança e Castings. Inclui funcionalidades para Conta, Conta Empresarial e Conta Poupança, promovendo a reutilização de código e a organização eficiente de operações bancárias.
+Um projeto Java de Sistema de Gestão de Contas Bancárias que demonstra a aplicação de conceitos de Programação Orientada a Objetos (POO), Herança, Anotaçoes e Castings. Inclui funcionalidades para Conta, Conta Empresarial e Conta Poupança, promovendo a reutilização de código e a organização eficiente de operações bancárias.
 
 ## Recursos Principais
 
